@@ -1,0 +1,72 @@
+.oneway-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 1000px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .oneway-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e0f7ff;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    color: #003355;
+  }
+  
+  .middle {
+    flex: 1;
+  }
+  
+  .right {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  
+  .header {
+    font-size: 17px;
+    font-weight: bold;
+    color: #004080;
+    margin-bottom: 8px;
+  }
+  
+  .flight-info {
+    font-size: 14px;
+    margin: 4px 0;
+  }
+  
+  .total-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  
+  .fund {
+    color: green;
+    margin-bottom: 12px;
+  }
+  
+  .select-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .select-btn:hover {
+    background-color: #005fa3;
+  }
+  

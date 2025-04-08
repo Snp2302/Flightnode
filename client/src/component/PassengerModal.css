@@ -1,0 +1,79 @@
+/* Overlay for the modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7bd4f1;
+    border-radius: 16px;
+    padding: 30px 40px;
+    z-index: 1000;
+    width: 500px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Modal background overlay (you can add this in the parent if needed) */
+  .modal::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .modal h3 {
+    text-align: center;
+    color:white;
+    margin-bottom: 20px;
+  }
+  
+  /* Passenger input block */
+  .passenger-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .passenger-form input,
+  .passenger-form select {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  /* Buttons */
+  .modal button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal button:first-of-type {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal button:first-of-type:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal button:last-of-type {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .modal button:last-of-type:hover {
+    background-color: #c62828;
+  }
+  

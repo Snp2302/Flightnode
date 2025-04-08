@@ -1,21 +1,39 @@
 import React from "react";
-import FlightCard from "./FlightCard";
+import RoundTripCard from "./RoundTripCard";
 
-const RoundTripResults = ({ outbound, returnFlights }) => {
+
+const RoundTripResults = ({ outbound, returnFlights, onSelect }) => {
+  if (!outbound || !returnFlights) {
+    return <p>Loading flight data...</p>;
+  }
+
+  const combinations = [];
+
+  outbound.forEach((out) => {
+    returnFlights.forEach((ret) => {
+      if (
+        out.origin === ret.destination &&
+        out.destination === ret.origin &&
+        out.fund && ret.fund && out.fund === ret.fund
+      ) {
+        combinations.push({
+          id: `${out.id}-${ret.id}`,
+          outbound: out,
+          return: ret,
+          totalPrice: parseFloat(out.price) + parseFloat(ret.price)
+        });
+      }
+    });
+  });
+
   return (
     <div className="results">
-      <h2>Outbound Flights</h2>
-      {!outbound || outbound.length === 0 ? (
-        <p>No outbound flights.</p>
+      {combinations.length > 0 ? (
+        combinations.map((combo) => (
+          <RoundTripCard key={combo.id} combo={combo} onSelect={onSelect} />
+        ))
       ) : (
-        outbound.map(f => <FlightCard key={`out-${f.id}`} flight={f} />)
-      )}
-
-      <h2>Return Flights</h2>
-      {!returnFlights || returnFlights.length === 0 ? (
-        <p>No return flights.</p>
-      ) : (
-        returnFlights.map(f => <FlightCard key={`ret-${f.id}`} flight={f} />)
+        <p>No round trip options available with same fund type.</p>
       )}
     </div>
   );

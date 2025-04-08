@@ -1,0 +1,108 @@
+.summary-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #f9fcff;
+    padding: 35px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    font-family: 'Segoe UI', sans-serif;
+    color: #002b5c;
+  }
+  
+  .summary-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #004080;
+    background: linear-gradient(to right);
+  }
+  
+  .flights,
+  .passenger-info,
+  .markup-section {
+    background-color: #ffffff;
+    border-left: 6px solid #007bff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.08);
+  }
+  
+  .flights h3,
+  .passenger-info h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #0050a0;
+  }
+  
+  .flights p,
+  .passenger-info p,
+  .markup-section p {
+    margin: 6px 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .markup-section label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  .markup-section input {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+    transition: border 0.3s ease;
+  }
+  
+  .markup-section input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+  }
+  
+  button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #0056b3, #00aaff);
+  }
+  
+  h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: #28a745;
+    font-size: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .passenger-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .passenger-card p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #002b5c;
+  }
+  
+  .passenger-card span {
+    font-weight: 600;
+    color: #002b5c;
+  }
+  
